@@ -31,6 +31,20 @@ namespace Queue
             }
             Console.WriteLine("Inserted int list" + new_node.data);
         }
+        public void Dequeue()
+        {
+            //If queue is empty,return NULL.
+            if (this.head == null)
+            {
+                Console.WriteLine("the Queue is empty");
+                return;
+            }
+            //store previous head and move head pointer one step ahead to delete the current element
+            Node temp = this.head;
+            this.head = this.head.next;
+            Console.WriteLine("Item deleted is {0}", temp.data);
+        }
+
         /// <summary>
         /// Displays this instance.
         /// </summary>
